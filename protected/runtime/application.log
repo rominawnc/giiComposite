@@ -1,0 +1,233 @@
+2013/05/04 19:57:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/giiComposite/?r=gii
+---
+2013/05/04 19:58:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/giiComposite/?r=gii
+---
+2013/05/04 20:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "=gii".' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('=gii')
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/giiComposite/index.php/=gii
+---
+2013/05/04 20:43:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/model
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/default/index
+---
+2013/05/04 20:44:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/model
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/default/index
+---
+2013/05/04 20:46:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/model
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii
+---
+2013/05/04 20:46:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/crud
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/form
+---
+2013/05/04 20:51:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/crud
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/form
+---
+2013/05/04 20:51:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#14 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/giiComposite/index.php/gii/crud
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/form
+---
+2013/05/05 15:22:03 [error] [exception.CException] exception 'CException' with message 'Property "CrudCode.id" is not defined.' in /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/templates/default/view.php(31): CComponent->__get('id')
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeModel.php(319): require('/home/rowa/Work...')
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/CrudCode.php(98): CCodeModel->render('/home/rowa/Work...')
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(162): CrudCode->prepare()
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#11 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /home/rowa/Workspace/giiComposite/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/giiComposite/index.php/gii/crud
+HTTP_REFERER=http://localhost/giiComposite/index.php/gii/crud
+---
+2013/05/05 15:24:07 [error] [php] Undefined variable: model (/home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/templates/default/view.php:30)
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(162): CrudCode->prepare()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CrudGenerator->prepare()
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CrudGenerator->actionIndex()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CrudGenerator->runAction()
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CrudGenerator->runActionWithFilters()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CrudGenerator->run()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/rowa/Workspace/giiComposite/index.php(13): CWebApplication->run()
+REQUEST_URI=/giiComposite/index.php/gii/crud
+in /home/rowa/Workspace/giiComposite/index.php (13)
+2013/05/05 15:24:29 [error] [php] Undefined variable: modelClass (/home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/generators/crud/templates/default/view.php:30)
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(162): CrudCode->prepare()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CrudGenerator->prepare()
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CrudGenerator->actionIndex()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CrudGenerator->runAction()
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CrudGenerator->runActionWithFilters()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CrudGenerator->run()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/rowa/Workspace/giiComposite/index.php(13): CWebApplication->run()
+REQUEST_URI=/giiComposite/index.php/gii/crud
+in /home/rowa/Workspace/giiComposite/index.php (13)
+2013/05/05 15:34:12 [error] [php] Undefined variable: model (/home/rowa/Workspace/giiComposite/protected/gii/crud/templates/default/update.php:21)
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(162): CrudCode->prepare()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CrudGenerator->prepare()
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CrudGenerator->actionIndex()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CrudGenerator->runAction()
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CrudGenerator->runActionWithFilters()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CrudGenerator->run()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/rowa/Workspace/giiComposite/index.php(13): CWebApplication->run()
+REQUEST_URI=/giiComposite/index.php/gii/crud
+in /home/rowa/Workspace/giiComposite/protected/gii/crud/templates/default/update.php (21)
+in /home/rowa/Workspace/giiComposite/index.php (13)
+2013/05/05 15:34:41 [error] [php] Object of class CMysqlTableSchema could not be converted to string (/home/rowa/Workspace/giiComposite/protected/gii/crud/templates/default/update.php:21)
+Stack trace:
+#0 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(162): CrudCode->prepare()
+#1 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/gii/CCodeGenerator.php(63): CrudGenerator->prepare()
+#2 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/actions/CInlineAction.php(49): CrudGenerator->actionIndex()
+#3 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(286): CrudGenerator->runAction()
+#5 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CController.php(265): CrudGenerator->runActionWithFilters()
+#6 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CrudGenerator->run()
+#7 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/rowa/Workspace/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/rowa/Workspace/giiComposite/index.php(13): CWebApplication->run()
+REQUEST_URI=/giiComposite/index.php/gii/crud
+in /home/rowa/Workspace/giiComposite/protected/gii/crud/templates/default/update.php (21)
+in /home/rowa/Workspace/giiComposite/index.php (13)
