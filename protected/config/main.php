@@ -38,7 +38,10 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-		),
+		),    
+        'ziiComposite'=>array(
+            'class'=>'extensions.ziiComposite.CButtonColumnComposite',
+        ),
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(

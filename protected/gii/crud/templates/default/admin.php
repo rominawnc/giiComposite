@@ -67,7 +67,7 @@ if($count>=7)
 	echo "\t\t*/\n";
 ?>
 		array(
-			'class'=>'CButtonColumnComposite',
+			'class'=>'application.extensions.ziiComposite.CButtonColumnComposite',
 		),
 	),
 )); ?>
