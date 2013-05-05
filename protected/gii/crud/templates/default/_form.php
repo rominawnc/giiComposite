@@ -22,6 +22,7 @@
 	<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
 
 <?php
+
 foreach($this->tableSchema->columns as $column)
 {
 	if($column->autoIncrement)
@@ -32,7 +33,6 @@ foreach($this->tableSchema->columns as $column)
 		<?php echo "<?php echo ".$this->generateActiveField($this->modelClass,$column)."; ?>\n"; ?>
 		<?php echo "<?php echo \$form->error(\$model,'{$column->name}'); ?>\n"; ?>
 	</div>
-
 <?php
 }
 ?>

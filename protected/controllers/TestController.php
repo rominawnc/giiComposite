@@ -1,36 +1,7 @@
+
 <?php
-/**
- * This is the template for generating a controller class file for CRUD feature.
- * The following variables are available in this template:
- * - $this: the CrudCode object
- */
-?>
 
-<?php 
-	$idList = array();	
-	$idListWithKeys = array();
-		$idListWithKeysAfterSave = array();
-	foreach($this->tableSchema->primaryKey as $pkIndex=>$pkName){
-		switch ($pkName) {
-				case 'id':					
-					array_push($idList,"$".$pkName);
-					array_push($idListWithKeys,"'".$pkName ."'"."=> \$_GET['id']");
-					array_push($idListWithKeysAfterSave,"'".$pkName ."'"."=> \$model->".$pkName);
-					break;				
-				default:
-					array_push($idList,"$".$pkName);
-					array_push($idListWithKeys,"'".$pkName ."'"."=> \$".$pkName);
-					array_push($idListWithKeysAfterSave,"'".$pkName ."'"."=> \$model->".$pkName);
-					break;
-			}		
-	}
-	$idList=implode(",", $idList);
-	$idListWithKeys=implode(",", $idListWithKeys);
-	$idListWithKeysAfterSave=implode(",", $idListWithKeysAfterSave);
-?>
-<?php echo "<?php\n"; ?>
-
-class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass."\n"; ?>
+class TestController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -78,10 +49,10 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView(<?php echo $idList;?>)
+	public function actionView($id,$idtwo)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel(<?php echo $idList ; ?>),
+			'model'=>$this->loadModel($id,$idtwo),
 		));
 	}
 
@@ -91,16 +62,16 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 */
 	public function actionCreate()
 	{
-		$model=new <?php echo $this->modelClass; ?>;
+		$model=new Test;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['<?php echo $this->modelClass; ?>']))
+		if(isset($_POST['Test']))
 		{
-			$model->attributes=$_POST['<?php echo $this->modelClass; ?>'];
+			$model->attributes=$_POST['Test'];
 			if($model->save())
-				$this->redirect(array('view',<?php echo $idListWithKeysAfterSave; ?>));
+				$this->redirect(array('view','id'=> $model->id,'idtwo'=> $model->idtwo));
 		}
 
 		$this->render('create',array(
@@ -113,19 +84,19 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate(<?php echo $idList;?>)
+	public function actionUpdate($id,$idtwo)
 	{
-		$model=$this->loadModel(<?php echo $idList;?>);
+		$model=$this->loadModel($id,$idtwo);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['<?php echo $this->modelClass; ?>']))
+		if(isset($_POST['Test']))
 		{
-			$model->attributes=$_POST['<?php echo $this->modelClass; ?>'];
+			$model->attributes=$_POST['Test'];
 
 			if($model->save())
-				$this->redirect(array('view',<?php echo $idListWithKeysAfterSave ;?>));
+				$this->redirect(array('view','id'=> $model->id,'idtwo'=> $model->idtwo));
 		}
 
 		$this->render('update',array(
@@ -138,9 +109,9 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete(<?php echo $idList;?>)
+	public function actionDelete($id,$idtwo)
 	{
-		$this->loadModel(<?php echo $idList;?>)->delete();
+		$this->loadModel($id,$idtwo)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -152,7 +123,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('<?php echo $this->modelClass; ?>');
+		$dataProvider=new CActiveDataProvider('Test');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -163,10 +134,10 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 */
 	public function actionAdmin()
 	{
-		$model=new <?php echo $this->modelClass; ?>('search');
+		$model=new Test('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['<?php echo $this->modelClass; ?>']))
-			$model->attributes=$_GET['<?php echo $this->modelClass; ?>'];
+		if(isset($_GET['Test']))
+			$model->attributes=$_GET['Test'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -177,12 +148,12 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return <?php echo $this->modelClass; ?> the loaded model
+	 * @return Test the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel(<?php echo $idList;?>)
+	public function loadModel($id,$idtwo)
 	{
-		$model=<?php echo $this->modelClass;?>::model()->findByAttributes(array(<?php echo $idListWithKeys;?>));
+		$model=Test::model()->findByAttributes(array('id'=> $_GET['id'],'idtwo'=> $idtwo));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -190,11 +161,11 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param <?php echo $this->modelClass; ?> $model the model to be validated
+	 * @param Test $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='<?php echo $this->class2id($this->modelClass); ?>-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='test-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

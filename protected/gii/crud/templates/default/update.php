@@ -9,9 +9,11 @@
 	$primaryKeyList = "'id'=>\$model->". $this->tableSchema->primaryKey;
 	if (is_array($this->tableSchema->primaryKey)){
 		$primaryKeys=array();
-
 		foreach ($this->tableSchema->primaryKey as $pkName=> $pkValue) {
+			
 			array_push($primaryKeys,"'".$pkValue."'=>\$model->".$pkValue);
+		 
+	
 		}
 		$primaryKeyList=implode(",",$primaryKeys);
 	}
@@ -34,9 +36,10 @@ echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	\$model->{$nameColumn}=>array('view',$primaryKeyList),
 	'Update',
-);\n";
+);\n ?>";
 ?>
-<h1>View <?php echo $this->modelClass. $primaryKeyCode;?></h1>
+
+<?php echo "<?php\n"; ?>
 $this->menu=array(
 	array('label'=>'List <?php echo $this->modelClass; ?>', 'url'=>array('index')),
 	array('label'=>'Create <?php echo $this->modelClass; ?>', 'url'=>array('create')),
@@ -45,6 +48,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update <?php echo $this->modelClass." <?php echo \$model->{$this->tableSchema->primaryKey}; ?>"; ?></h1>
+<h1>Update <?php echo $this->modelClass. $primaryKeyCode; ?></h1>
 
 <?php echo "<?php echo \$this->renderPartial('_form', array('model'=>\$model)); ?>"; ?>

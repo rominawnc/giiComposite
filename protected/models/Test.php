@@ -4,8 +4,8 @@
  * This is the model class for table "test".
  *
  * The followings are the available columns in table 'test':
- * @property string $id
- * @property string $idtwo
+ * @property integer $id
+ * @property integer $idtwo
  */
 class Test extends CActiveRecord
 {
@@ -34,9 +34,13 @@ class Test extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-		return array(
+		return array(			
+			array('id', 'required'),
 			array('idtwo', 'required'),
-			array('idtwo', 'length', 'max'=>20),
+			array('idtwo','numerical'),
+			array('id','numerical'),
+			array('id, idtwo', 'length', 'max'=>20),
+
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, idtwo', 'safe', 'on'=>'search'),
